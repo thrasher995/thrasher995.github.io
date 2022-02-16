@@ -12,4 +12,14 @@ tags: [data, engineering, Scientists]
 3. Exploration & Visualization **(Data Scientist)**
 4. Experimentation & Prediction **(Data Scientist)**
 
+#### * Comparison of Tasks:
+
+| Data Engineer            | Data Scientist             |
+| --- | --- |
+| * Ingest data            | * Exploit data             |
+| * Set up DBs             | * Access DBs               |
+| * Build data pipelines   | * Use pipeline outputs     |
+| * Strong SW Skills       | * Strong Analytical Skills |
+
+
 
