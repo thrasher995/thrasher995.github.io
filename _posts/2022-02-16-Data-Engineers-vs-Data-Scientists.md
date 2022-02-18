@@ -6,7 +6,7 @@ categories: dataengineering datascience
 tags: [data, engineering, Scientists]
 ---
 
-#### * Refering to the Data Dorkflow:
+#### * Refering to the Data Workflow:
 1. Data Collection & Storage **(Data Engineer)**
 2. Data Prep. **(Data Scientist)**
 3. Exploration & Visualization **(Data Scientist)**
