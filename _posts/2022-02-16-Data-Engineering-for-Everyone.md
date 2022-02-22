@@ -7,10 +7,20 @@ tags: [data, engineering]
 ---
 
 ## Data Workflow:
-1. Data Collection & Storage
-2. Data Prep.
-3. Exploration & Visualization
-4. Experimentation & Prediction
+```mermaid
+flowchart LR;
+    
+    A[Data Collection & Storage] --> B[Data Prep.];
+    B-->C[Exploration & Visualization];
+    C-->D[Experimentation & Prediction];
+    
+
+    style A fill:#8fffd4,stroke:#000,stroke-width:2px,color:#000
+    style B fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
+    style C fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
+    style D fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
+
+```
 
 #### * Data Engineers deliver the correct data in the right form, to the right people, as efficiently as possible.
 
