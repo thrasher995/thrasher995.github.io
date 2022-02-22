@@ -83,7 +83,7 @@ graph TD;
 | - Time needed for Data to flow |
 
 ## ETL Framework:
-```mermaid
+{% mermaid %}
 graph LR;
     classDef pinkStyle fill:#d90ba9,stroke:#000,stroke-width:2px,color:#fff
     classDef orangeStyle fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
@@ -92,7 +92,7 @@ graph LR;
     Ext["Extract Data"] --> Trs["Transform Data"];
     Trs --> Load["Load Data"];
     class Ext,Trs,Load greenStlye;   
-```
+{% endmermaid %}
 
 
 ## Notes on Data Pipelines:
