@@ -4,10 +4,11 @@ title: Data Engineers vs Data Scientists
 subtitle: Data Engineers enable Data Scientists
 categories: dataengineering datascience
 tags: [data, engineering, Scientists]
+mermaid: true
 ---
 
 #### * Refering to the Data Workflow:
-```mermaid
+<div class="mermaid">
 flowchart LR;
     subgraph Data Engineer
         A[Data Collection & Storage];
@@ -25,7 +26,7 @@ flowchart LR;
     style C fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
     style D fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
 
-```
+</div>
 
 
 #### * Comparison of Tasks:

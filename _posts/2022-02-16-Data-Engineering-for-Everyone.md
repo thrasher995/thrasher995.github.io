@@ -4,10 +4,11 @@ title: Data Engineering for Everyone
 subtitle: Responsibilities & Big Data
 categories: dataengineering
 tags: [data, engineering]
+mermaid: true
 ---
 
 ## Data Workflow:
-```mermaid
+<div class="mermaid">
 flowchart LR;
     
     A[Data Collection & Storage] --> B[Data Prep.];
@@ -20,7 +21,7 @@ flowchart LR;
     style C fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
     style D fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
 
-```
+</div>
 
 #### * Data Engineers deliver the correct data in the right form, to the right people, as efficiently as possible.
 
