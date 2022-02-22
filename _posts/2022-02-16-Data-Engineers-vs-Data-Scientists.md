@@ -7,10 +7,26 @@ tags: [data, engineering, Scientists]
 ---
 
 #### * Refering to the Data Workflow:
-1. Data Collection & Storage **(Data Engineer)**
-2. Data Prep. **(Data Scientist)**
-3. Exploration & Visualization **(Data Scientist)**
-4. Experimentation & Prediction **(Data Scientist)**
+```mermaid
+flowchart LR;
+    subgraph Data Engineer
+        A[Data Collection & Storage];
+    end
+
+    subgraph Data Scientist
+        B[Data Prep.] 
+        B-->C[Exploration & Visualization];
+        C-->D[Experimentation & Prediction];
+    end
+    A --> B
+
+    style A fill:#8fffd4,stroke:#000,stroke-width:2px,color:#000
+    style B fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
+    style C fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
+    style D fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
+
+```
+
 
 #### * Comparison of Tasks:
 
