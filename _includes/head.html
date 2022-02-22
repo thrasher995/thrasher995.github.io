@@ -15,4 +15,7 @@
   {%- endif -%}
   {%- include extensions/code-highlight.html -%}
   {%- include custom-head.html -%}
+  {% if page.mermaid %}
+  {% include mermaid.html %}
+  {% endif %}
 </head>
