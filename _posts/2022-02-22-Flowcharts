@@ -1,0 +1,8 @@
+## FLOWCHART TEST
+```mermaid
+flowchart TD;
+    A[Data Collection & Storage] --> B[Data Prep.];
+    A-->C;
+    B-->D;
+    C-->D;
+```
