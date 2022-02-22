@@ -22,7 +22,7 @@ mermaid: true
 ## Example of a Data Pipeline:
 <div class="mermaid">
 flowchart LR;
-    A("Data Source") --"Output | Input"--> B("Operation 1");
+    A("Data Source") --"Input"--> B("Operation 1");
     B --"Output | Input"--> C("Operation 2");
     C --"Output | Input"--> D("Operation 3");
     D  --"Output" -->  E("Data Sink");  
