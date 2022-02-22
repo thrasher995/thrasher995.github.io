@@ -4,6 +4,7 @@ title: Data Pipelines
 subtitle: Automation of Data Flow
 categories: dataengineering datapipelines automation
 tags: [data, engineering, pipelines, automation, dataflow]
+mermaid: true
 ---
 
 ## What is a Data Pipeline?
@@ -19,7 +20,7 @@ tags: [data, engineering, pipelines, automation, dataflow]
 | * Data Sink (destination) |
 
 ## Example of a Data Pipeline:
-```mermaid
+<div class="mermaid">
 flowchart LR;
     A("Data Source") --"Output | Input"--> B("Operation 1");
     B --"Output | Input"--> C("Operation 2");
@@ -30,9 +31,9 @@ flowchart LR;
     style C fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
     style D fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
     style E fill:#d90ba9,stroke:#000,stroke-width:2px,color:#fff
-```
+</div>
 ## Why do Data Pipelines exist?
-```mermaid
+<div class="mermaid">
 graph LR;
     P(("Pipeline"));
     A["Automate flow of data <br> from one station to the next"];
@@ -56,10 +57,10 @@ graph LR;
     class P pinkStyle
     class A,E orangeStyle
 
-```
+</div>
 ## Automation
 
-```mermaid
+<div class="mermaid">
 graph TD;
     classDef pinkStyle fill:#d90ba9,stroke:#000,stroke-width:2px,color:#fff
     classDef orangeStyle fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
@@ -74,7 +75,7 @@ graph TD;
     class A pinkStyle;
     class Ext,Trs,Comb,Validating,Loading orangeStyle;
     A(Automation);
-```
+</div>
 
 | Automation Reduces: |
 |---|
@@ -83,7 +84,7 @@ graph TD;
 | - Time needed for Data to flow |
 
 ## ETL Framework:
-{% mermaid %}
+<div class="mermaid">
 graph LR;
     classDef pinkStyle fill:#d90ba9,stroke:#000,stroke-width:2px,color:#fff
     classDef orangeStyle fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
@@ -92,7 +93,7 @@ graph LR;
     Ext["Extract Data"] --> Trs["Transform Data"];
     Trs --> Load["Load Data"];
     class Ext,Trs,Load greenStlye;   
-{% endmermaid %}
+</div>
 
 
 ## Notes on Data Pipelines:
