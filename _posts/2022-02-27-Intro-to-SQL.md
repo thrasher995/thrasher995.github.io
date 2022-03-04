@@ -28,7 +28,7 @@ mermaid: true
 
 ### Some SQL Commands:
 <div class="mermaid">
-flowchart LR;
+graph LR;
     root["Commands"]
     style root fill:#8fffd4,stroke:#000,stroke-width:2px,color:#000
 
