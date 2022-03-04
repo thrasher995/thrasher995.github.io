@@ -18,6 +18,8 @@ mermaid: true
 |---|---|
 | Create & Maintain DBs | Query from DB |
 
+- `ls`: list files in directory
+- `mkdir`: create directory
 ## The Basics:
 
 #### Important Notes:
@@ -121,7 +123,7 @@ graph LR;
     style note2 fill:#ffccff,stroke:#000,stroke-width:2px,color:#000
     
 
-    root-->whr["AS"]
+    root-->whr["WHERE"]
     style whr fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
 
     subgraph WHERE:
@@ -146,26 +148,24 @@ graph LR;
 
 #### Part 2:
 <div class="mermaid">
-    graph LR;
+    graph TD;
     root["Commands"]
     style root fill:#8fffd4,stroke:#000,stroke-width:2px,color:#000
-
     
-    
-    root-->use["USE"]
-    style use fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
+    root-->us["USE"]
+    style us fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
 
-    use-->useEx["USE db_name; CREATE TABLE table_name"]
+    us-->useEx["USE db_name; CREATE TABLE table_name"]
     style useEx fill:#e6ccb3,stroke:#000,stroke-width:2px,color:#000
 
 
-    root-->drop["DROP"]
-    style drop fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
+    root-->drp["DROP"]
+    style drp fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
     
     subgraph DROP:
-        drop --> drop1["DROP DATABASE db_name"]
-        drop --> drop2["DROP TABLE table_name"]
-        drop --> drop3["DROP INDEX index_name ON table_name"]
+        drp --> drop1["DROP DATABASE db_name"]
+        drp --> drop2["DROP TABLE table_name"]
+        drp --> drop3["DROP INDEX index_name ON table_name"]
     end
 
     style drop1 fill:#d9ffb3,stroke:#000,stroke-width:2px,color:#000
@@ -209,18 +209,17 @@ graph LR;
     style del1Ex fill:#e6ccb3,stroke:#000,stroke-width:2px,color:#000
     style del2Ex fill:#e6ccb3,stroke:#000,stroke-width:2px,color:#000
 
-    root --> alt["ALTER"]
-    style alt fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
+    root --> alter["ALTER"]
+    style alter fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
 
-    alt-->alt1["ALTER DATABASE db_name;"]
+    alter-->alt1["ALTER DATABASE db_name;"]
     
     style alt1 fill:#d9ffb3,stroke:#000,stroke-width:2px,color:#000
     
-
     subgraph ALTER TABLE table_name:
-        alt--"Add column"-->alt2a["ALTER TABLE table_name ADD col_name <type>;"]
-        alt--"Drop column"-->alt2b["ALTER TABLE table_name DROP COLUMN col_name;"]
-        alt--"Change datatype of column"-->alt2c["ALTER TABLE table_name ALTER COLUMN col_name <new_type>;"]
+        alter--"Add column"-->alt2a["ALTER TABLE table_name ADD col_name <type>;"]
+        alter--"Drop column"-->alt2b["ALTER TABLE table_name DROP COLUMN col_name;"]
+        alter--"Change datatype of column"-->alt2c["ALTER TABLE table_name ALTER COLUMN col_name <new_type>;"]
     end
     style alt2a fill:#d9ffb3,stroke:#000,stroke-width:2px,color:#000
     style alt2b fill:#d9ffb3,stroke:#000,stroke-width:2px,color:#000
