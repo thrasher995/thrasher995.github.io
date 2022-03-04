@@ -27,6 +27,8 @@ mermaid: true
 - SQL commands are written in CAPS according to convention.
 
 ### Some SQL Commands:
+#### Part 1:
+
 <div class="mermaid">
 graph LR;
     root["Commands"]
@@ -137,6 +139,19 @@ graph LR;
     style whrEx1 fill:#e6ccb3,stroke:#000,stroke-width:2px,color:#000
     style whrEx2 fill:#e6ccb3,stroke:#000,stroke-width:2px,color:#000
     
+    
+
+</div>
+
+
+#### Part 2:
+<div class="mermaid">
+    graph LR;
+    root["Commands"]
+    style root fill:#8fffd4,stroke:#000,stroke-width:2px,color:#000
+
+    
+    
     root-->use["USE"]
     style use fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
 
@@ -212,5 +227,4 @@ graph LR;
     style alt2c fill:#d9ffb3,stroke:#000,stroke-width:2px,color:#000
 
 </div>
-
 
