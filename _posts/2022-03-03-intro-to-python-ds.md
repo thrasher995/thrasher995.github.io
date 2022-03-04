@@ -7,8 +7,7 @@ tags: [data, engineering, databases, SQL]
 mermaid: true
 ---
 ## What is a data structure?
-A **data structure** is a particular way of organizing data in a computer so that it can be used effectively.<br />
-
+A **data structure** is a particular way of organizing data in a computer so that it can be used effectively.
 
 ## Comparison between common Data Structures in Python:
 
