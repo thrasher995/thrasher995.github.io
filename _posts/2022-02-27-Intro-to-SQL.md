@@ -177,11 +177,17 @@ flowchart LR;
     root --> del["DELETE"]
     style del fill:#ffe18f,stroke:#000,stroke-width:2px,color:#000
 
-    del--"Removes specific record(s)"-->del1["DELETE FROM table_name WHERE condition;"]
-    del1-->del1Ex["DELETE FROM family WHERE name = 'Mohammed';"]
-    
-    del--"Removes all records"-->del2["DELETE FROM table_name;"]
-    del2-->del2Ex["DELETE FROM family;"]
+    subgraph DELETE FROM:
+        del--"Removes specific record(s)"-->del1["DELETE FROM table_name WHERE condition;"]
+        del--"Removes all records"-->del2["DELETE FROM table_name;"]
+        
+    end
+
+    subgraph DELETE examples:
+        del1-->del1Ex["DELETE FROM family WHERE name = 'Mohammed';"]
+        del2-->del2Ex["DELETE FROM family;"]
+
+    end
 
     style del1 fill:#d9ffb3,stroke:#000,stroke-width:2px,color:#000
     style del2 fill:#d9ffb3,stroke:#000,stroke-width:2px,color:#000
