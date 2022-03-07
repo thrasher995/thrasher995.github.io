@@ -18,8 +18,7 @@ mermaid: true
 |---|---|
 | Create & Maintain DBs | Query from DB |
 
-- `ls`: list files in directory
-- `mkdir`: create directory
+
 ## The Basics:
 
 #### Important Notes:
@@ -148,7 +147,7 @@ graph LR;
 
 #### Part 2:
 <div class="mermaid">
-    graph TD;
+    graph LR;
     root["Commands"]
     style root fill:#8fffd4,stroke:#000,stroke-width:2px,color:#000
     
