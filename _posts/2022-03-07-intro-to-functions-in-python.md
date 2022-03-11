@@ -60,27 +60,30 @@ def first_function():
 
 print (first_function())    # Invoking function inside the print() method
 ```
+
 Output:
+
 ``` 
 Hello World!
 ```
+
 ### Returning multiple values:
 - To return multiple values, Tuples (Python Data Structure) are used.
 
-```
+<pre>
 def multiple_return_values():
     """returns "Hello World!" """
     output_string = "Hello World!"
     return (output_string, len(output_string), type(output_string))
 
 print (multiple_return_values())    # Invoking function inside the print() method
-```
+</pre>
 
 Output:
 
-``` 
+<pre>
 ('Hello World !', 13, <class 'str'>)
-```
+</pre>
 
 ## Arguments (Function's Parameters):
 - Used to pass data into functions.
@@ -231,13 +234,17 @@ thrice = echo(3)
 # Call twice() and thrice() then print
 print(twice('hello'), thrice('hello'))
 ```
+
 Output:
+
 ```
 <class 'function'>
 hellohello hellohellohello
 ```
+
 - In this example, the **echo** function returns **inner_echo** function, with 2 taken as an argument for the **echo** function. This can also be seen in the output of print(type(twice)) in the outputs block.
 - This means that our call to twice('hello') is equivalent to the code below:
+
 ```
 def echo(2):
     """Return the inner_echo function."""
