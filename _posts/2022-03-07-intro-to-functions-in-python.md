@@ -70,20 +70,20 @@ Hello World!
 ### Returning multiple values:
 - To return multiple values, Tuples (Python Data Structure) are used.
 
-<pre>
+```
 def multiple_return_values():
     """returns "Hello World!" """
     output_string = "Hello World!"
     return (output_string, len(output_string), type(output_string))
 
 print (multiple_return_values())    # Invoking function inside the print() method
-</pre>
+```
 
 Output:
 
-<pre>
+```
 ('Hello World !', 13, <class 'str'>)
-</pre>
+```
 
 ## Arguments (Function's Parameters):
 - Used to pass data into functions.
