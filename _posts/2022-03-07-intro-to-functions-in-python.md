@@ -66,6 +66,7 @@ Hello World!
 ```
 ### Returning multiple values:
 - To return multiple values, Tuples (Python Data Structure) are used.
+
 ```
 def multiple_return_values():
     """returns "Hello World!" """
@@ -74,7 +75,9 @@ def multiple_return_values():
 
 print (multiple_return_values())    # Invoking function inside the print() method
 ```
+
 Output:
+
 ``` 
 ('Hello World !', 13, <class 'str'>)
 ```
