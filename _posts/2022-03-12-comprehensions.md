@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comprehensions
-subtitle: Shorter syntax, same results
+subtitle: List & Dictionary Comprehensions
 categories: Python
 tags: [python, list comprehensions]
 mermaid: false
