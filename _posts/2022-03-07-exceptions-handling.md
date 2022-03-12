@@ -2,7 +2,7 @@
 layout: post
 title: Exception Handling in Python
 subtitle: try, catch, except, and finally
-categories: python, exceptions
+categories: Python
 tags: [python, errors, handling, exceptions]
 ---
 

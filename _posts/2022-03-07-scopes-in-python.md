@@ -2,8 +2,8 @@
 layout: post
 title: Scopes
 subtitle: Global, Local, and Built-in
-categories: python, scope
-tags: [python, scope]
+categories: Python
+tags: [python, scopes]
 mermaid: true
 
 ---
@@ -12,7 +12,7 @@ mermaid: true
 - The scope of an identifier name binding – an association of a name to an entity, such as a variable – is the region of a computer program where the binding is valid – the name can be used to refer to the entity. Such a region is referred to as a "scope block". 
 - In other parts of the program, the name may refer to a different entity (it may have a different binding), or to nothing at all (it may be unbound).
 
-# Types of scopes:
+## Types of scopes:
 
 1. **Built-in scope:** names in pre-defined built-ins module (such as print and sum).
 2. **Global scope:** binding is done in the main body of a Python script. 

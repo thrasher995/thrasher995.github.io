@@ -2,7 +2,7 @@
 layout: post
 title: Loading Data in Chunks
 subtitle: Using Iterators to Load Large Files into Memory
-categories: python
+categories: Python
 tags: [iterators, large data, python, data engineering]
 mermaid: false
 ---

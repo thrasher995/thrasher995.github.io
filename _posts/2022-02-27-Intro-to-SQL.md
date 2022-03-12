@@ -2,8 +2,8 @@
 layout: post
 title: Introduction to SQL
 subtitle: Structured Query Language
-categories: dataengineering databases SQL
-tags: [data, engineering, databases, SQL]
+categories: Pipelines
+tags: [data, databases, SQL, data engineering]
 mermaid: true
 ---
 ## What is SQL?

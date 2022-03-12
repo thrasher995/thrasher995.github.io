@@ -2,8 +2,8 @@
 layout: post
 title: Introduction to Python Data Structures
 subtitle: Lists, Tuples, Sets and Dictionaries
-categories: dataengineering databases SQL
-tags: [data, engineering, databases, SQL]
+categories: Python
+tags: [python, data structures]
 mermaid: true
 ---
 ## What is a data structure?

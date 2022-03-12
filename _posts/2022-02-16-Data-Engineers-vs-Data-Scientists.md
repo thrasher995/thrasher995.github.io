@@ -2,8 +2,8 @@
 layout: post
 title: Data Engineers vs Data Scientists
 subtitle: Data Engineers enable Data Scientists
-categories: dataengineering datascience
-tags: [data, engineering, Scientists]
+categories: Pipelines
+tags: [data engineering, data science]
 mermaid: true
 ---
 

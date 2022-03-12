@@ -2,7 +2,7 @@
 layout: post
 title: Data Engineering for Everyone
 subtitle: Responsibilities & Big Data
-categories: dataengineering
+categories: Pipelines
 tags: [data, engineering]
 mermaid: true
 ---

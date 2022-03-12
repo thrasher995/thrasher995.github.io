@@ -2,8 +2,8 @@
 layout: post
 title: Data Pipelines
 subtitle: Automation of Data Flow
-categories: dataengineering datapipelines automation
-tags: [data, engineering, pipelines, automation, dataflow]
+categories: Pipelines
+tags: [data, pipelines, automation, dataflow, data engineering]
 mermaid: true
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: Introduction to Iterators & Iterables
 subtitle: Iterators vs Iterables
-categories: python
+categories: Python
 tags: [iterators, iterables, python]
 mermaid: false
 ---

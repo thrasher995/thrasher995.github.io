@@ -2,7 +2,7 @@
 layout: post
 title: Introduction to Python Functions
 subtitle: Creating your own functions in Python
-categories: python, functions
+categories: Python
 tags: [python, functions]
 mermaid: false
 

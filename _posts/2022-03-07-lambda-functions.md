@@ -2,7 +2,7 @@
 layout: post
 title: Lambda Functions in Python
 subtitle: map(), filter(), reduce()
-categories: python, functions
+categories: Python
 tags: [python, lambda, functions]
 mermaid: false
 
