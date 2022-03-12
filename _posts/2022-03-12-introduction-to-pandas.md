@@ -53,10 +53,9 @@ mermaid: false
 
 2. Creating a DataFrame from a CSV file:
     - Using `pandas.read_csv()` method.
-    - Note that the file needs to be where you're working.
     - Syntax: (refer to pandas doc. for all arguments)
         <pre>
-        <i> identifier_name = pandas.read_csv('filename.csv') </i></pre>
+        <i> identifier_name = pandas.read_csv('path/.../filename.csv') </i></pre>
     - *names* argument for `read_csv()` method is used for custom headers.
     - *skiprows* argument for `read_csv()` method is used to skip rows at the start of the CSV file.
     - *index_col* argument for `read_csv()` method is used to replace **index column** with a column of
