@@ -2,7 +2,7 @@
 layout: post
 title: Comprehensions
 subtitle: Shorter syntax, same results
-categories: python
+categories: Python
 tags: [python, list comprehensions]
 mermaid: false
 ---
