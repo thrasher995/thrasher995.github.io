@@ -14,7 +14,18 @@ mermaid: false
 
 
 ## Creating New Lists from Existing Lists
- 
+ - Syntax (without if condition):
+<pre>
+<i> list_name = [expression for item in iterable] </i>
+</pre>
+- Syntax (with if condition):
+<pre>
+<i> list_name = [expression for item in iterable if condition] </i>
+                    or
+<i> list_name = [expression if statement else else_expression for item in iterable] </i>
+</pre>
+
+
 - Components:
     - an iterable
     - an iterator variable
@@ -45,7 +56,7 @@ Output: (Notice that printing new_list_for & new_list_comp gives the same result
 [70, 150, 1400, 210, 1350, 1740, 610, 130]
 ```
 
-### Example 2: List Comprehension + if Statement (appending elements less than or equal to 100)
+### Example 2: List Comprehension + if statement (appending elements less than or equal to 100)
 ```
 old_list = [7,15,140,21,135,174,61,13]
 new_list_for = []
@@ -70,6 +81,33 @@ Output: (Notice that printing new_list_for & new_list_comp gives the same result
 [7, 15, 21, 61, 13]
 [7, 15, 21, 61, 13]
 ```
+### Example 3: List Comprehension + if & else statements
+```
+old_list = [7,15,140,21,135,174,61,13]
+new_list_for = []
+new_list_comp = []
+
+# Populating list using traditional for loop
+for element in old_list:
+    if element <= 100:              # If statement
+        new_list_for.append(element)
+    else:                           # Else: add (element-100) to list
+        new_list_for.append(element-100)
+# Populating list using list comprehension + if statement + else expression
+new_list_comp = [element if element <= 100 else (element-100) for element in old_list ]
+
+# Printing all lists
+print(old_list)
+print(new_list_for)
+print(new_list_comp)
+```
+Output: (Notice that printing new_list_for & new_list_comp gives the same result)
+```
+[7, 15, 140, 21, 135, 174, 61, 13]
+[7, 15, 40, 21, 35, 74, 61, 13]
+[7, 15, 40, 21, 35, 74, 61, 13]
+```
+
 
 ## Replacing Nested `for` Loops
 - Readibility is worse when using list comprehension here.
