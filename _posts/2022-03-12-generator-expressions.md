@@ -3,7 +3,7 @@ layout: post
 title: Python Generator Objects
 subtitle: Generator functions & Generator expressions
 categories: Python
-tags: [generators, python, data engineering, data science, data generation]
+tags: [generators, python, data engineering, data science]
 mermaid: false
 ---
 
