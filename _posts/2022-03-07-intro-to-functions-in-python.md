@@ -106,7 +106,8 @@ Output:
 ### Default Arguments:
 - Default values indicate that the function argument will take that value if no argument value is passed during the function call.
 
-- Example:
+- Example: Raising to Power
+
 ```
 def raise_to_power(value, power=1):
     """returns (value^power) """
@@ -115,15 +116,19 @@ def raise_to_power(value, power=1):
 
 print(raise_to_power(3), raise_to_power(3,1), raise_to_power(3,3))
 ```
+
 Output:
+
 ```
 3 3 27
 ```
+
 ### Flexible Arguments (*args, **kwargs):
 - In Python, we can pass a variable number of arguments to a function using special symbols: *args, **kwargs.
 - `*args:` for Non-keyword arguments.
 - `**kwargs:` for Keyword arguments.
-- *args Example:
+- *args Example: Passing Variable Number of Arguments
+
 ```
 def args_adder(*args):
     """ Sums all values in arguments """
@@ -137,13 +142,17 @@ args_adder(1)   # Invoking args_adder with arguments 1,
 args_adder(1,2)   # Invoking args_adder with arguments 1,2
 args_adder(1,2,3,4,5)   # Invoking args_adder with arguments 1,2,3,4,5
 ```
+
 Output:
+
 ```
 1
 3
 15
 ```
-- **kwargs Example:
+
+- **kwargs Example: Passing Keyworded Arguments
+
 ```
 # Defining report_status
 def report_status(**kwargs):    
@@ -165,7 +174,9 @@ report_status(name="luke", affiliation="jedi", status="missing")
 report_status(name="anakin", affiliation="sith lord", status="deceased")
 
 ```
+
 Output:
+
 ```
 BEGIN: REPORT
 
@@ -190,6 +201,7 @@ END REPORT
 ## Nested Functions:
 - A function within another.
 
+### Example 1: Nested Function example
 ```
 def outer_function(arg1,arg2,arg3):
     """Returns whether the arguments are even or odd as a Tuple"""
@@ -204,13 +216,16 @@ def outer_function(arg1,arg2,arg3):
 
 print (outer_function(1,2,4))
 ```
+
 Output:
+
 ```
 ('Odd', 'Even', 'Even')
 ```
+
 - The scope of outer_function is an **enclosing scope** to inner_function.
 
-### Another Nested Functions Example:
+### Example 2: Another Nested Functions Example
 ```
 def echo(n):
     """Return the inner_echo function."""
