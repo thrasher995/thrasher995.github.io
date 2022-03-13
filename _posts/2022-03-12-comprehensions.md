@@ -31,7 +31,8 @@ mermaid: false
     - an iterator variable
     - output expression
 
-### Example 1: Multiplying Elements in a List by 10
+### Example 1: Multiplying Elements in a List
+- Multiplying elements in a list by 10.
 ```
 old_list = [7,15,140,21,135,174,61,13]
 new_list_for = []
@@ -56,7 +57,8 @@ Output: (Notice that printing new_list_for & new_list_comp gives the same result
 [70, 150, 1400, 210, 1350, 1740, 610, 130]
 ```
 
-### Example 2: List Comprehension + if statement (appending elements less than or equal to 100)
+### Example 2: List Comprehension with if statement
+- Appending elements less than or equal to 100 to a list.
 ```
 old_list = [7,15,140,21,135,174,61,13]
 new_list_for = []
@@ -81,7 +83,7 @@ Output: (Notice that printing new_list_for & new_list_comp gives the same result
 [7, 15, 21, 61, 13]
 [7, 15, 21, 61, 13]
 ```
-### Example 3: List Comprehension + if & else statements
+### Example 3: List Comprehension with if-else
 ```
 old_list = [7,15,140,21,135,174,61,13]
 new_list_for = []
@@ -112,7 +114,8 @@ Output: (Notice that printing new_list_for & new_list_comp gives the same result
 ## Replacing Nested `for` Loops
 - Readibility is worse when using list comprehension here.
 
-### Example 1: (element, element ** i) <--> Raised to Powers (1,2,3)
+### Example 1: Raising elements to Powers
+- (element, element ** i) <--> Raised to Powers (1,2,3)
 ```
 old_list = [2,3,4]
 new_list_for = []
@@ -138,7 +141,8 @@ Output:
 [(2, 2), (2, 4), (2, 8), (3, 3), (3, 9), (3, 27), (4, 4), (4, 16), (4, 64)]
 ```
 
-### Example 2: Same as Example 1 + if statement (only add even numbers to list)
+### Example 2:  Adding even numbers to a list
+- Example 1 + if statement.
 ```
 old_list = [2,3,4]
 new_list_for = []
