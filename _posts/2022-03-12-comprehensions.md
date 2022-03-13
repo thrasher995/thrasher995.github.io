@@ -122,7 +122,6 @@ Output: (Notice that printing new_list_for & new_list_comp gives the same result
 
 ## Replacing Nested `for` Loops
 - Readibility is worse when using list comprehension here.
-
 ### **Example 2.1:** Raising elements to Powers
 - (element, element ** i) <--> Raised to Powers (1,2,3)
 
