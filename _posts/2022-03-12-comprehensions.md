@@ -31,7 +31,7 @@ mermaid: false
     - an iterator variable
     - output expression
 
-### Example 1: Multiplying Elements in a List
+### **Example 1.1:** Multiplying Elements in a List
 - Multiplying elements in a list by 10.
 ```
 old_list = [7,15,140,21,135,174,61,13]
@@ -57,7 +57,7 @@ Output: (Notice that printing new_list_for & new_list_comp gives the same result
 [70, 150, 1400, 210, 1350, 1740, 610, 130]
 ```
 
-### Example 2: List Comprehension with if statement
+### **Example 1.2:** List Comprehension with if statement
 - Appending elements less than or equal to 100 to a list.
 ```
 old_list = [7,15,140,21,135,174,61,13]
@@ -83,7 +83,7 @@ Output: (Notice that printing new_list_for & new_list_comp gives the same result
 [7, 15, 21, 61, 13]
 [7, 15, 21, 61, 13]
 ```
-### Example 3: List Comprehension with if-else
+### Example 1.3: List Comprehension with if-else
 ```
 old_list = [7,15,140,21,135,174,61,13]
 new_list_for = []
@@ -114,7 +114,7 @@ Output: (Notice that printing new_list_for & new_list_comp gives the same result
 ## Replacing Nested `for` Loops
 - Readibility is worse when using list comprehension here.
 
-### Example 1: Raising elements to Powers
+### **Example 2.1:** Raising elements to Powers
 - (element, element ** i) <--> Raised to Powers (1,2,3)
 ```
 old_list = [2,3,4]
@@ -141,8 +141,8 @@ Output:
 [(2, 2), (2, 4), (2, 8), (3, 3), (3, 9), (3, 27), (4, 4), (4, 16), (4, 64)]
 ```
 
-### Example 2:  Adding even numbers to a list
-- Example 1 + if statement.
+### **Example 2.2:**  Adding even numbers to a list
+- Example 2.1 + if statement.
 ```
 old_list = [2,3,4]
 new_list_for = []
@@ -190,7 +190,7 @@ Output:
 <i> dict_name = {key: (value if condition else else_statement) for key in iterable} </i>                  
 </pre>
 
-### Example: Dictionary Comprehension with if-else
+### **Example 3.1:** Dictionary Comprehension with if-else
 ```
 engines_displacement_dict = {'4A': 1.6, 'SR20':2.0, '1JZ':2.5, '2JZ':3.0,'3S':2.0}
 eng_dict_for = {}
