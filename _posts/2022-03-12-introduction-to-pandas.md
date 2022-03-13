@@ -332,7 +332,7 @@ mermaid: false
     # Comparing the 2 lists:
     for i in range(len(iloc_list)):
         if (type(iloc_list[i][0])==pd.Series) or (type(iloc_list[i][0])==pd.DataFrame):
-            # print(type(iloc_list[i][0]))
+            # If elements are not equal, set flag = False
             if not (loc_list[i][0].equals(iloc_list[i][0])):
                 flag = False
                 
