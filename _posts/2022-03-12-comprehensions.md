@@ -143,6 +143,7 @@ Output:
 
 ### **Example 2.2:**  Adding even numbers to a list
 - Example 2.1 + if statement.
+
 ```
 old_list = [2,3,4]
 new_list_for = []
@@ -162,12 +163,15 @@ print(old_list)
 print(new_list_for)
 print(new_list_comp)
 ```
+
 Output: 
+
 ```
 [2, 3, 4]
 [(2, 2), (2, 4), (2, 8), (4, 4), (4, 16), (4, 64)]
 [(2, 2), (2, 4), (2, 8), (4, 4), (4, 16), (4, 64)]
 ```
+
 ## Creating Dictionaries
  - Curly braces `{}` are used instead of square-brackets `[]`.
 
@@ -191,6 +195,7 @@ Output:
 </pre>
 
 ### **Example 3.1:** Dictionary Comprehension with if-else
+
 ```
 engines_displacement_dict = {'4A': 1.6, 'SR20':2.0, '1JZ':2.5, '2JZ':3.0,'3S':2.0}
 eng_dict_for = {}
@@ -205,7 +210,9 @@ print(engines_displacement_dict)
 print(eng_dict_for)
 print(eng_dict_comp)
 ```
+
 Output:
+
 ```
 {'4A': 1.6, 'SR20': 2.0, '1JZ': 2.5, '2JZ': 3.0, '3S': 2.0}
 {'4A': 'Less than 2.0', 'SR20': 'Less than 2.0', '1JZ': 2.5, '2JZ': 3.0, '3S': 'Less than 2.0'}
