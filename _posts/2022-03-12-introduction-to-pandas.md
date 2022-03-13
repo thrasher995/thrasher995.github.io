@@ -334,19 +334,12 @@ mermaid: false
         if (type(iloc_list[i][0])==pd.Series) or (type(iloc_list[i][0])==pd.DataFrame):
             # print(type(iloc_list[i][0]))
             if not (loc_list[i][0].equals(iloc_list[i][0])):
-                print(not (loc_list[i][0].equals(iloc_list[i][0])))
-                print(iloc_list[i][0])
-                print(loc_list[i][0])
                 flag = False
-                print(str(i),type(iloc_list[i][0]))
+                
         else:
             if not (loc_list[i][0]==(iloc_list[i][0])):
-                print(1)
-                print(not (loc_list[i][0].equals(iloc_list[i][0])))
-                print(iloc_list[i][0])
-                print(loc_list[i][0])
                 flag = False
-                print(str(i),type(iloc_list[i][0]))
+                
 
     print('Lists are equal (T/F):',flag)
     ```
