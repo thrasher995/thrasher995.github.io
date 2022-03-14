@@ -20,7 +20,9 @@ mermaid: false
 - Iterating over an iterator object "consumes" the elements inside the iterator object.
 - If values in an iterator are to be kept, the iterator is cast to an iterable (List, Tuple,etc.).
 
-### Example 1: Iterating using `next()`
+### Examples on Iterables & Iterators
+
+#### **Example 3.1:** Iterating using `next()`
 ```
 string_obj = 'no'                   # Creating an iterable object
 iterator_obj = iter(string_obj)     # Creating Iterator object
@@ -33,7 +35,7 @@ n
 o
 ```
 
-### Example 2: `StopIteration` Exception
+#### **Example 3.2:** `StopIteration` Exception
 
 ```
 string_obj = 'no'                   # Creating an iterable object
@@ -52,7 +54,7 @@ n
 o
 ```
 
-### Example 3: Star/Splat (`*`) Operator
+#### **Example 3.3:** Star/Splat (`*`) Operator
 
 ```
 string_obj = 'no'                   # Iterable object
@@ -67,7 +69,7 @@ n o
 n o
 ```
 
-### Example 4-a: Consuming elements in an Iterator - `*` Operator twice
+#### **Example 3.4-a:** Consuming elements in an Iterator - `*` Operator twice
 
 ```
 string_obj = 'Hello World !'                # Iterable object
@@ -82,7 +84,7 @@ Hello World !
 
 ```
 
-### Example 4-b: Consuming elements in an Iterator - Mixing `*` & `next()`
+#### **Example 3.4-b:** Consuming elements in an Iterator - Mixing `*` & `next()`
 
 ```
 string_obj = 'Hello World !'            # Creating iterable object
@@ -104,7 +106,7 @@ l l o   W o r l d   !
 ## Iterating Over Dictionaries
 - Key & Value pairs in a dictionary are unpacked using `items()` method.
 
-### Example: Using `items()` method
+### **Example 4.1:** Using `items()` method
 
 ```
 engines_displacement_dict = {'4A': '1.6L', 'SR20':'2.0L', '1JZ':'2.5L', '2JZ':'3.0L','3S':'2.0L'}
@@ -123,7 +125,7 @@ SR20 2.0L
 ## Iterating Over File Connections
 - `iter()` & `next()` methods are used.
 
-### Example 1-a: Using `next()`
+#### **Example 5.1-a:** Using `next()`
 
 ```
 my_file = open('file.txt')
@@ -142,7 +144,7 @@ SECOND LINE
 
 ```
 
-### Example 1-b: Casting Iterator object to Tuple & printing it
+#### **Example 5.1-b:** Casting Iterator object to Tuple & printing it
 
 ```
 my_file = open('file.txt')
@@ -156,7 +158,7 @@ Output: (New Lines are at end of rows in .txt file as `\n`)
 ('FIRST LINE\n', 'SECOND LINE\n', 'THIRD LINE\n', 'FOURTH LINE')
 ```
 
-### Example 1-c: Using `next()`, casting to String, and `strip()` method
+#### **Example 5.1-c:** Using `next()`, casting to String, and `strip()` method
 - Removing New Line
 
 ```
@@ -173,7 +175,7 @@ Output:
 FIRST LINE
 SECOND LINE
 ```
-### Example 2: Using `*`
+#### **Example 5.2:** Using `*`
 
 ```
 my_file = open('file.txt')
@@ -205,7 +207,7 @@ Start:  the index value from which the counter is
 </pre>
 
 
-### Example 1: Creating an enumerate object using `enumerate()`
+#### **Example 6.1:** Creating an enumerate object using `enumerate()`
 
 ```
 string_obj = 'Hello'                        # Creating an iterable object
@@ -220,7 +222,7 @@ Output:
 [(0, 'H'), (1, 'e'), (2, 'l'), (3, 'l'), (4, 'o')]
 ```
 
-### Example 2: Looping over an enumerate object
+#### **Example 6.2:** Looping over an enumerate object
 ```
 string_obj = 'Hello'                        # Creating an iterable object
 enumerate_object = enumerate(string_obj)    # Creating an enumerate object
@@ -236,7 +238,7 @@ Output:
 4 o
 ```
 
-### Example 3: Changing `start` argument
+#### **Example 6.3:** Changing `start` argument
 ```
 string_obj = 'Hello'                            # Creating an iterable object
 enumerate_object = enumerate(string_obj, 2)     # Creating an enumerate object
@@ -265,7 +267,7 @@ Python 3.10+:
 </pre>
 * Note: with strict=False(default option), zip() stops when the shortest iterable is exhausted. It will ignore the remaining items in the longer iterables
 
-### Example 1-a: Creating a zip object (iterables in arguments of equal lengths)
+#### **Example 7.1-a:** Creating a zip object (iterables in arguments of equal lengths)
 ```
 list1 = ['Toyota','Mitsubishi', 'Mazda', 'BMW','Nissan','Golf']         # len(list1) = 6
 list2= ['Supra', 'Lancer Evolution', 'RX-7','M1','Skyline GT-R','R32']  # len(list2) = 6
@@ -277,7 +279,7 @@ Output:
 [('Toyota', 'Supra'), ('Mitsubishi', 'Lancer Evolution'), ('Mazda', 'RX-7'), ('BMW', 'M1'), ('Nissan', 'Skyline GT-R'), ('Golf', 'R32')]
 ```
 
-### Example 1-b: Creating a zip object (iterables in arguments of unequal lengths)
+#### **Example 7.1-b:** Creating a zip object (iterables in arguments of unequal lengths)
 ```
 list1 = ['Toyota','Mitsubishi', 'Mazda', 
          'BMW','Nissan','Golf','Audi','Ferrari','Mercedes Benz']            # len(list1) = 9
