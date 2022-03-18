@@ -238,6 +238,7 @@ Process finished with exit code 0
 #### **Example 3.2**: Passing a dictionary to `na_values`
 - The **Vermont tax return data by ZIP code** dataset from DataCamp is used in this example
 - Some rows have 0 values in the zipcode and should be set as missing values using the `na_values` argument.
+
 <pre>
 import pandas as pd
 tax_df = pd.read_csv('vt_tax_data_2016.csv',dtype={'zipcode':str})
@@ -333,6 +334,7 @@ Process finished with exit code 1
 
 #### **Example 3.3-b :** Skipping bad lines
 - `warn_bad_lines`'s default value is used in this example (**=True**).
+
 <pre>
 import pandas as pd
 kurupt_tax_df = pd.read_csv('kurupt_tax_data_2016.csv',error_bad_lines=False)
@@ -364,6 +366,7 @@ Process finished with exit code 0
 
 #### **Example 3.3-c :** Skipping bad lines & turning warnings off
 - Setting `warn_bad_lines=False` (Skipping silently).
+
 <pre>
 import pandas as pd
 kurupt_tax_df = pd.read_csv('kurupt_tax_data_2016.csv',error_bad_lines=False,warn_bad_lines=False)
