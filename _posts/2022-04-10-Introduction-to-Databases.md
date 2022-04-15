@@ -37,8 +37,8 @@ mermaid: false
 ## **Querying Databases** using **SQLAlchemy**:
 - `pandas.read_sql(query, engine)`
 - Arguments:
-    -`query`: String containing SQL Query to run or Table to load.
-    -`engine`: Connection/Database engine object.
+    - `query`: String containing SQL Query to run or Table to load.
+    - `engine`: Connection/Database engine object.
 
 ## `inspect` function in SQLAlchemy:
 - Returns an Inspector object.
