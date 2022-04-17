@@ -1,5 +1,5 @@
 ---
-layout: notebook
+layout: post
 title: Querying using Python
 subtitle: Connecting to AWS DB & Querying
 categories: Python Pipelines SQL 
