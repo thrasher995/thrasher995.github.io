@@ -5,14 +5,4 @@
   img: https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png
   text: English
 
-- lang: fr
-  img: https://cdn.countryflags.com/thumbs/france/flag-400.png
-  text: French
 
-- lang: de
-  img: https://cdn.countryflags.com/thumbs/germany/flag-400.png
-  text: Germany
-  
-- lang: ar
-  img: https://cdn.countryflags.com/thumbs/egypt/flag-400.png
-  text: Egypt
