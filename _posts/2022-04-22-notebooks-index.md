@@ -3,7 +3,7 @@ layout: post
 title: Jupyter Notebooks Index
 subtitle: Hyperlinks to Notebooks
 categories: Python Notebooks
-tags: [python, jupiter notebooks, notebooks]
+tags: [python, jupyter, notebooks]
 mermaid: false
 ---
 
