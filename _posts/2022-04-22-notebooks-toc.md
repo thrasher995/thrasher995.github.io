@@ -15,7 +15,7 @@ mermaid: false
 - The purpose of this post is to have a log for all Jupyter Notebooks created in the [_notebooks](https://github.com/thrasher995/thrasher995.github.io/tree/main/_data/_notebooks) directory.
 
 ### Notebooks <a name="notebooks"></a>
-1. [Querying using Python](https://thrasher995.github.io/python/pipelines/sql/2022/04/17/postgresql-through-python.html)
+1. [Querying using Python](https://github.com/thrasher995/thrasher995.github.io/blob/main/_data/_notebooks/postgresql.ipynb)
 
 
 
