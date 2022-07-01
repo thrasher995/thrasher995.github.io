@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Machine Learning Framework
+title: More on the Machine Learning Framework
 subtitle: More on ML Framework
 categories: ML Frameworks
 tags: [machine learning, frameworks]
