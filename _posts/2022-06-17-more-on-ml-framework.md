@@ -122,6 +122,8 @@ mermaid: false
 - **Data Leakage**: When some of the test data leaks into the training data, which results in *Overfitting*.
 - **Data Mismatch**: The data you're training on is different than the you're testing on, which results in *Underfitting*. For example: datasets have different features.
 
+![Figure 1: Overfitting vs Balanced Model](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Overfitting.svg/300px-Overfitting.svg.png)
+
 #### Fixes for Underfitting & Overfitting:
 1. Fixes for Underfitting:
     - Using a more advanced/complicated model.
