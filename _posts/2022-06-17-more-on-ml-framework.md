@@ -21,7 +21,7 @@ mermaid: false
 - When shouldn't we use ML?
     - If a simple instructions-based system works to solve our problem.
 
-# 1. Problem Definition:
+## 1. Problem Definition:
 - Aligning the problem we're trying to solve to a machine learning problem.
 
 ### Supervised Learning:
@@ -48,33 +48,33 @@ mermaid: false
 
 
 
-# 2. Data:
+## 2. Data:
 - The more data, the better.
 - What kind of data do we have?
 
-## Main types of Data:
+### Main types of Data:
 1. Structured: tabulated data.
 2. Unstructured: Images, Videos, Audio, etc.
 
 
-# 3. Evaluation:
+## 3. Evaluation:
 - How well does a ML model to predict something?
 - What's a success? (90%)
 
-## The Metrics for different Problems:
+### The Metrics for different Problems:
 1. **Classification:** Accuracy, Precision, and Recall.
 2. **Regression:** Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE).
 3. **Recommendation Problems:** Precision at K.
 
 
-# 4. Features:
+## 4. Features:
 - What do we already know about the data?
 - Feature variables (inputs) are used to predict target variables (output).
 
-# 5. Modeling:
+## 5. Modeling:
 - Based on the data we have, which ML model should we use?
 
-## Parts of Modeling:
+### Parts of Modeling:
 - Train, Validation & Test Sets (3 Sets):
     - Most important concept in ML.
     - Data is split into 3 seperate sets.
@@ -132,11 +132,11 @@ mermaid: false
     - Collect more data.
     - Using a less complicated model.
 
-# 6. Experimentation:
+## 6. Experimentation:
 - Since the ML Framework is a highly iterative process, try different things and compare results.
 
 
-# Tools used for Machine Learning & Modeling:
+## Tools used for Machine Learning & Modeling:
 - TensorFlow
 - PyTorch
 - Scikit-learn
