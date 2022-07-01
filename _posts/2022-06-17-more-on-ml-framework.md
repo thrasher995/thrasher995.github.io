@@ -142,3 +142,4 @@ mermaid: false
 - Scikit-learn
 - CatBoost
 - XGBoost
+- PyCaret
