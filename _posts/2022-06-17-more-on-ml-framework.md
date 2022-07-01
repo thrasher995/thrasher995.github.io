@@ -25,7 +25,8 @@ mermaid: false
 - Aligning the problem we're trying to solve to a machine learning problem.
 
 ### Supervised Learning:
-- We know inputs & outputs.
+We know inputs & outputs.
+
 1. Classification Example: 
     - Inputs: Patient reports. 
     - Outputs: Patient has/doesn't have a heart disease.
