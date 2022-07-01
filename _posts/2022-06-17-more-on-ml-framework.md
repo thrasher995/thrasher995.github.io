@@ -2,8 +2,8 @@
 layout: post
 title: More on the Machine Learning Framework
 subtitle: More on ML Framework
-categories: ML Frameworks
-tags: [machine learning, frameworks]
+categories: ML Frameworks Modeling
+tags: [machine learning, frameworks, modeling, data]
 mermaid: false
 ---
 
