@@ -115,15 +115,18 @@ We know inputs & outputs.
 - Performance of Test Set can be slightly lower than the Train set's.
 
 #### Underfitting & Overfitting:
-- **Underfitting:** Test set's performance is dramatically lower than Train set's. 
-- **Overfitting:** Test set's performance is higher than Train set's.
+- **Underfitting:** refers to a model that can neither model the training data nor generalize to new data.
+- **Overfitting:** refers to a model that models the training data too well, but may fail to fit to additional data or predict future observations reliably.
 - *Underfitting* & *Overfitting* are examples of models that can't generalize well.
 - A balanced performance, with a fitting in the *Goldilocks Zone*, is desired.
+![Figure 1: Overfitting vs Balanced Model](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Overfitting.svg/300px-Overfitting.svg.png)
+
+<!---
 #### Reasons for Overfitting** & **Underfitting:
 - **Data Leakage**: When some of the test data leaks into the training data, which results in *Overfitting*.
 - **Data Mismatch**: The data you're training on is different than the you're testing on, which results in *Underfitting*. For example: datasets have different features.
 
-![Figure 1: Overfitting vs Balanced Model](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Overfitting.svg/300px-Overfitting.svg.png)
+
 
 #### Fixes for Underfitting & Overfitting:
 1. Fixes for Underfitting:
@@ -134,6 +137,9 @@ We know inputs & outputs.
 2. Fixes for Overfitting:
     - Collect more data.
     - Using a less complicated model.
+
+-->
+
 
 ## 6. Experimentation:
 - Since the ML Framework is a highly iterative process, try different things and compare results.
