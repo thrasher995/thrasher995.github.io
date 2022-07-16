@@ -16,7 +16,7 @@ mermaid: false
 
 ### Notebooks <a name="notebooks"></a>
 1. [Querying using Python](https://github.com/thrasher995/thrasher995.github.io/blob/main/_data/_notebooks/postgresql.ipynb)
-
+2. [ML - Example on Classification Problems](https://github.com/thrasher995/thrasher995.github.io/blob/main/_data/_notebooks/classification_example.ipynb)
 
 
 
