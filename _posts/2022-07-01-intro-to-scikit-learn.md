@@ -72,4 +72,4 @@ mermaid: false
 
 
 ### Example 2: 
-
+[ML - Example on Regression Problems](https://github.com/thrasher995/thrasher995.github.io/blob/main/_data/_notebooks/regression_example.ipynb)
