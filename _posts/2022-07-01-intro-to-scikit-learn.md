@@ -38,7 +38,7 @@ mermaid: false
         - [sklearn.preprocessing.OneHotEncoder()](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
         - [pandas.get_dummies()](https://pandas.pydata.org/docs/reference/api/pandas.get_dummies.html)
         - **Feature Scaling**: Ensuring that all numerical data (across all features) is on the same scale.
-            - Example: 
+            - Example: (GET BACK TO THIS)
 2. Splitting data into *train* & *test* sets:
     - `train_test_split` method from `sklearn.model_selection` module is used.
     - `test_size` parameter is used to set % of dataset to be test (*test_size=0.25* for 25%).
