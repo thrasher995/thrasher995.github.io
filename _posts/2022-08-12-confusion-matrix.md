@@ -2,7 +2,7 @@
 layout: post
 title: Confusion Matrix
 subtitle: Representing TPR vs FPR
-categories: [ML, Data Science, Scikit-learn]
+categories: ML, Data-Science, Scikit-learn
 tags: [machine learning, scikit-learn, data science]
 mermaid: false
 ---
