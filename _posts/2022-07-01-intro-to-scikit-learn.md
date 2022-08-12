@@ -73,25 +73,29 @@ mermaid: false
 
 - Predictions are made afterwards using the `predict()` method.
 - To make a prediction on a single sample, a Pandas Series is converted & reshaped into a 1-D NumPy array, and is then given as the argument for `predict()` method as shown below:
+    
     ```
     .predict(np.array(pandas_series).reshape(1, -1))
     ```
 
 ### 4. Evaluating Models
-- Ways to evaluate Sklearn estimators: 
-    - Check Sklearn [Metrics & scoring documentation](https://scikit-learn.org/stable/modules/model_evaluation.html) for more info.
-    1. `score()` method:
-        - Used on split dataset-couples to evaluate estimators.
-        - Highest value is 1.0 & Lowest value is 0.0.
-        - Default `score()` evaluation metric for Classification problems is **Mean Accuracy**.
-        - Default `score()` evaluation metric for Regression problems is **r_squared** (Coefficient of Determination).
 
-    2. The `scoring` parameter:
-        - Cross-validation Accuracy:
-            ![Figure2: 5-Fold Cross-validation](https://d2mk45aasx86xg.cloudfront.net/image5_11zon_af97fe4b03.webp)
-            - Does k-fold splits.
-            - Returns an array.
-            - Syntax:
+#### Ways to evaluate Sklearn estimators: 
+
+- (Check out Sklearn [Metrics & scoring documentation](https://scikit-learn.org/stable/modules/model_evaluation.html) for more info.)
+    
+1. `score()` method:
+    - Used on split dataset-couples to evaluate estimators.
+    - Highest value is 1.0 & Lowest value is 0.0.
+    - Default `score()` evaluation metric for Classification problems is **Mean Accuracy**.
+    - Default `score()` evaluation metric for Regression problems is **r_squared** (Coefficient of Determination).
+
+2. The `scoring` parameter:
+    - Cross-validation Accuracy:
+        ![Figure 2: 5-Fold Cross-validation](https://d2mk45aasx86xg.cloudfront.net/image5_11zon_af97fe4b03.webp)
+        - Does k-fold splits.
+        - Returns an array.
+        - Syntax:
             
             ```Python
             from sklearn.model_selection import cross_val_score
@@ -99,22 +103,54 @@ mermaid: false
             cross_val_score(classifier, X, Y, cv=5)
             ```
         
-        - AUC/ROC Curves:
-            - Area Under the Curve (AUC).
-            - Receiver Operating Characteristic (ROC).
-            - Comparison of model's True Positive Right (TPR) vs models' False Positive Right (FPR):
-                - True positive = model predicts 1 when truth is 1
-                - False positive = model predicts 1 when truth is 0
-                - True negative = model predicts 0 when truth is 0
-                - False negative = model predicts 0 when truth is 1
-            
+    - AUC/ROC Curves:
+        - Area Under the Curve (AUC).
+        - Receiver Operating Characteristic (ROC).
+        - For binary Classification problems.
+        - AUC tells you how good a model can predict - perfect model has a score of 1.0
+        - Comparison of model's True Positive Right (TPR) vs models' False Positive Right (FPR):
+            - True positive = model predicts 1 when truth is 1
+            - False positive = model predicts 1 when truth is 0
+            - True negative = model predicts 0 when truth is 0
+            - False negative = model predicts 0 when truth is 1
+        - Check out [Confusion Matrix](https://thrasher995.github.io/ml/python/scikit-learn/2022/08/12/confusion-matrix.html)
 
-    3. Problem-specific metric functions:
+        - Syntax:
+           
+            ```Python
+            from sklearn.metrics import roc_auc_score
+            roc_auc_score(y_test, y_predicted_positive)
+            ```
+
+3. Problem-specific metric functions:
+
+#### Classification Report:
+- Builds a text report showing the main classification metrics, such as:
+    - Precision:
+        - Accuracy of positive predictions.
+        - Precision = true_postives/(true_postives + false_postives)
+    - Recall:
+        - The ability of a classifier to find all positive instances.
+        - Fraction of positives that were correctly identified.
+        - Recall = true_positives/(true_positives + false_negatives)
+    - F1-score:
+        - Harmonic Mean of Precision and Recall.
+        - Best score = 1.0, worst score = 0.0
+        - F1 should be used for comparing models, not for global accuracy.
+        - F1 Score = (2 * Recall * Precision) / (Recall + Precision)
+    - Support:
+        - Shows the number of elements in each row
 
     
-- Evaluation Metrics in Regression problems:
-    1. Mean Absolute Error (`mean_absolute_error` from sklearn.metrics)
-    2. 
+
+
+- Syntax:
+        ```Python
+        from sklearn.metrics import classification_report
+        print (classification_report(y_test,y_preds))
+        ```
+    
+
 
 
 ### 5. Improving Model
