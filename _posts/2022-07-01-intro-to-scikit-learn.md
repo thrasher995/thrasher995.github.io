@@ -27,40 +27,139 @@ mermaid: false
 6. Saving & Reloading trained model
 
 
-## 1. Getting Data Ready
+## Step 1: Getting Data Ready
 1. Preparation:
-    - Importing dataset into a Pandas DataFrame
-    - Splitting data into features & labels (X & Y):
+    1. Importing dataset into a Pandas DataFrame
+    2. Splitting data into features & labels (X & Y):
         **X:** has all of the *features* columns
         **Y:** has *target* column
-    - Filling (**Imputing**) or disregarding missing values.
-    - Converting non-numerical values into numerical values (**feature encoding**).
-        - [sklearn.preprocessing.OneHotEncoder()](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
-        - [pandas.get_dummies()](https://pandas.pydata.org/docs/reference/api/pandas.get_dummies.html)
-        - **Feature Scaling**: Ensuring that all numerical data (across all features) is on the same scale.
-            - Example: (GET BACK TO THIS)
+    3. Filling (**Imputing**) or disregarding missing values:
+        1. Imputing with a `SimpleImputer()` object:
+            [sklearn.impute.SimpleImputer()](https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html)
+        2. Dropping values using `dropna()` method:
+            [pandas.DataFrame.dropna()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html)
+    4. Converting non-numerical values into numerical values (**feature encoding**).
+        1. [sklearn.preprocessing.OneHotEncoder()](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
+        2. [pandas.get_dummies()](https://pandas.pydata.org/docs/reference/api/pandas.get_dummies.html)
+    
+    5. **Feature Scaling**: </br>
+        Ensuring that all numerical data (across all features) is on the same scale.</br>
+        When features are on different scales, one feature would dominate over the other.</br>
+        Needed when using ML Algorithms that require **gradient calculation**, such as: *linear/logistic regression*, *artificial neural networks*, and *deep neural networks*.</br>
+        Not required when using *distance-based* or *tree-based* algorithms, such as: *K-Means Clustering*, *K Nearest Neighbors*, *Decision Trees*, *Random Forest*, and *XG-Boost*.
+
+        1. **Standardization:**
+            - Convert features to have a **mean = 0**, **std=1**.
+            - Also known as **Z-score Normalization**.
+            - Properties have behavior of a standard normal distribution.
+            ![Figure 1: Standardized Normal Distribution](https://raw.githubusercontent.com/thrasher995/thrasher995.github.io/main/_data/_pictures/standarized-normal-distribution.jpg)
+
+            - Formula:
+                ```
+                z = (x - mean) / (std(x)) 
+                ```
+            - Using `sklearn.preprocessing.StandardScaler`:
+                ``` Python
+                from sklearn.preprocessing import StandardScaler
+                scaler = StandardScaler()
+                scaled_df = scaler.fit_transform(original_df)
+                ```    
+            - Example on *Standardization*: </br>
+                **A,B,C** are the Features. </br>
+                Before *Standardization*:
+                
+                || A | B | C |
+                |---|---|---|---|
+                |count|1000.00|1000.00|1000.00|
+                |mean|2.20|56.25|2320.00|
+                |std|0.24|4.86|193.85|
+                |min|1.50|40.00|1800.00|
+                |25%|2.04|53.03|2190.45|
+                |50%|2.20|56.16|2312.44|
+                |75%|2.36|59.42|2455.76|
+                |max|3.00|70.00|3000.00|
+
+                After *Standardization*:
+                || A | B | C |
+                |---|---|---|---|
+                |count|1000.00|1000.00|1000.00|
+                |mean|0.00|0.00|0.00|
+                |std|1.00|1.00|1.00|
+                |min|-2.88|-3.34|-2.68|
+                |25%|-0.66|-0.66|-0.67|
+                |50%|0.01|-0.02|-0.04|
+                |75%|0.68|0.65|0.70|
+                |max|3.33|2.83|3.51|
+
+        2. **Normalization:**
+            - Make features on a scale of 0-1.
+            - Formula:
+                ```
+                x' = (x - min(x)) / (max(x)-min(x)) 
+                ```
+            - Using `sklearn.preprocessing.MinMaxScaler`:
+                ``` Python
+                from sklearn.preprocessing import MinMaxScaler
+                scaler = MinMaxScaler()
+                scaled_df = scaler.fit_transform(original_df)
+                ```
+            - Example on *Normalization*: </br>
+                **A,B,C** are the Features. </br>
+                Before *Normalization*:
+                
+                || A | B | C |
+                |---|---|---|---|
+                |count|1000.00|1000.00|1000.00|
+                |mean|2.20|56.25|2320.00|
+                |std|0.24|4.86|193.85|
+                |min|1.50|40.00|1800.00|
+                |25%|2.04|53.03|2190.45|
+                |50%|2.20|56.16|2312.44|
+                |75%|2.36|59.42|2455.76|
+                |max|3.00|70.00|3000.00|
+
+                After *Normalization*:
+                || A | B | C |
+                |---|---|---|---|
+                |count|1000.00|1000.00|1000.00|
+                |mean|0.46|0.54|0.43|
+                |std|0.16|0.16|0.16|
+                |min|0.00|0.00|0.00|
+                |25%|0.36|0.43|0.33|
+                |50%|0.47|0.54|0.43|
+                |75%|0.57|0.65|0.55|
+                |max|1.00|1.00|1.00|
+
+
+            
+
+        ### Standardization vs Normalization:
+        - In case of neural networks, Normalization is preffered because distribution is not assumed beforehand.
+        - Standardization is preferred when data follows a *gaussian distribution*.
+        - Standardization is preferred there are a lot of outliers in the data.
+
 2. Splitting data into *train* & *test* sets:
     - `train_test_split` method from `sklearn.model_selection` module is used.
     - `test_size` parameter is used to set % of dataset to be test (*test_size=0.25* for 25%).
         - Default value is 0.25.
 
 
-## 2. Choosing Suitable Model 
+## Step 2: Choosing Suitable Model 
 - In Scikit-Learn, ML Models are refered to as *Estimators*.
 - Choosing the model depends on the type of problem at hand.
 - Some models would yield better results than others for the same problem, so it's important to ensure the right model was chosen.
 - The map below helps with choosing the right model for the problem.
-![Figure 1: Model Selection Map](https://raw.githubusercontent.com/mrdbourke/zero-to-mastery-ml/d7c767dd562ce65e73efa23c8e210f6260f678e5/images/sklearn-ml-map.png)
+![Figure 2: Model Selection Map](https://raw.githubusercontent.com/mrdbourke/zero-to-mastery-ml/d7c767dd562ce65e73efa23c8e210f6260f678e5/images/sklearn-ml-map.png)
 
 - Notes:
     - If you have **structured** (tabulated) data, use ensemble methods.
     - If you have **unstructured** data, use deep learning or transfer learning methods.
 
-## 3. Fitting Model to Data & Making Predictions
+## Step 3: Fitting Model to Data & Making Predictions
 1. Fitting a model to data:
     - Models attempt to learn patterns in a dataset when the `fit()` method is called on a dataset.
-2. Making Predictions:
-- There are 2 ways to make predictions:
+2. Making Predictions:</br>
+There are 2 ways to make predictions:
     1. Using `predict()` method:
         - Main method used
         - Used for Regression & Classification problems.
@@ -71,14 +170,14 @@ mermaid: false
         - Right value represents probability of prediction being True.
 
 
-- Predictions are made afterwards using the `predict()` method.
-- To make a prediction on a single sample, a Pandas Series is converted & reshaped into a 1-D NumPy array, and is then given as the argument for `predict()` method as shown below:
+    - Predictions are made afterwards using the `predict()` method.
+    - To make a prediction on a single sample, a Pandas Series is converted & reshaped into a 1-D NumPy array, and is then given as the argument for `predict()` method as shown below:
     
-    ```
-    .predict(np.array(pandas_series).reshape(1, -1))
-    ```
+        ```
+        .predict(np.array(pandas_series).reshape(1, -1))
+        ```
 
-## 4. Evaluating Models
+## Step 4: Evaluating Models
 
 ### General Evaluation (`score` method):
 - Used on split dataset-couples to evaluate estimators.
@@ -91,7 +190,7 @@ mermaid: false
 
 ### Evaluating Classifiers (Classification Problems): 
 1. Cross-validation Accuracy:
-        ![Figure 2: 5-Fold Cross-validation](https://d2mk45aasx86xg.cloudfront.net/image5_11zon_af97fe4b03.webp)
+        ![Figure 3: 5-Fold Cross-validation](https://d2mk45aasx86xg.cloudfront.net/image5_11zon_af97fe4b03.webp)
     - Does k-fold splits.
     - Returns an array.
     - Syntax:
@@ -179,21 +278,29 @@ mermaid: false
 
 
 
-## 5. Improving Model
+## Step 5: Improving Model
 - Tuning the estimator's hyperparameters to yield better results.
 - It's best practice to test different hyperparameters with a validation set or cross-validation.
 
-## 6. Saving & Reloading Trained Model
+## Step 6: Saving & Reloading Trained Model
 - Trained models can be exported and used again later.
 - Python's `pickle` module is used to export & load trained modules.
 - `pickle.dump()` method is used to export models.
 - `pickle.load()` method is used to load models.
+
+# Introducing [sklearn.pipeline.Pipeline](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html):
+- Pipeline of transforms with a final *estimator*.
+- Sequentially applies a list of transforms and a final estimator.
+- The purpose of the pipeline is to assemble several steps that can be cross-validated together while setting different parameters.
+- Refer to documentation for more info.
 
 # Examples on the Scikit-Learn Workflow:
 ## Example 1: Predicting Heart Diseases - Classification Problem
 [ML - Example on Classification Problems](https://github.com/thrasher995/thrasher995.github.io/blob/main/_data/_notebooks/classification_example.ipynb)
 
 
-
-## Example 2: 
+## Example 2: Predicting Median House Values in California Districts - Regression Problem
 [ML - Example on Regression Problems](https://github.com/thrasher995/thrasher995.github.io/blob/main/_data/_notebooks/regression_example.ipynb)
+
+
+## Example 3: Using Scikit-Learn's `Pipeline()` Class:
