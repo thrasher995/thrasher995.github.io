@@ -34,19 +34,19 @@ mermaid: false
         **X:** has all of the *features* columns
         **Y:** has *target* column
     3. Filling (**Imputing**) or disregarding missing values:
-        1. Imputing with a `SimpleImputer()` object: </br>
-            [sklearn.impute.SimpleImputer()](https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html)
-        2. Dropping values using `dropna()` method: </br>
-            [pandas.DataFrame.dropna()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html)
-    4. Converting non-numerical values into numerical values (**feature encoding**): </br>
+        1. Imputing with a [sklearn.impute.SimpleImputer()](https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html) object.
+            
+        2. Dropping values using [pandas.DataFrame.dropna()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html) method.
+            
+    4. Converting non-numerical values into numerical values (**feature encoding**):
         1. [sklearn.preprocessing.OneHotEncoder()](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
         2. [pandas.get_dummies()](https://pandas.pydata.org/docs/reference/api/pandas.get_dummies.html)
     
     5. **Features Scaling**: 
-        </br> Ensuring that all numerical data (across all features) is on the same scale. </br>
-        When features are on different scales, one feature would dominate over the other. </br>
-        Needed when using ML Algorithms that require **gradient calculation**, such as: *linear/logistic regression*, *artificial neural networks*, and *deep neural networks*. </br>
-        Not required when using *distance-based* or *tree-based* algorithms, such as: *K-Means Clustering*, *K Nearest Neighbors*, *Decision Trees*, *Random Forest*, and *XG-Boost*.
+        - Ensuring that all numerical data (across all features) is on the same scale. 
+        - When features are on different scales, one feature would dominate over the other.
+        - Needed when using ML Algorithms that require **gradient calculation**, such as: *linear/logistic regression*, *artificial neural networks*, and *deep neural networks*.
+        - Not required when using *distance-based* or *tree-based* algorithms, such as: *K-Means Clustering*, *K Nearest Neighbors*, *Decision Trees*, *Random Forest*, and *XG-Boost*.
 
         1. **Standardization:**
             - Convert features to have a **mean = 0**, **std=1**.
