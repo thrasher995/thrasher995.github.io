@@ -7,18 +7,18 @@ tags: [machine learning, scikit-learn, python, pipelines]
 mermaid: false
 ---
 
-# What is Scikit-learn (sklearn)?
+## What is Scikit-learn (sklearn)?
 - It's a Python Machine Learning library.
 - It helps users to build Machine Learning Models that come up with patterns in the data & use the patterns to make predictions.
 - Scikit-learn implements tools to evaluate predictions.
 
-# Why use Scikit-learn?
+## Why use Scikit-learn?
 - It's built on Numpy & MatplotLib
 - Has many in-built ML models
 - Implements methods to evaluate ML models
 - Very well-design API
 
-# Scikit-learn Workflow
+## Scikit-learn Workflow
 1. Getting the data ready
 2. Choosing a suitable model 
 3. Fitting model to data & make predictions
@@ -27,7 +27,7 @@ mermaid: false
 6. Saving & Reloading trained model
 
 
-## Step 1: Getting Data Ready
+### Step 1: Getting Data Ready
 1. Preparation:
     1. Importing dataset into a Pandas DataFrame
     2. Splitting data into features & labels (X & Y):
@@ -120,7 +120,7 @@ mermaid: false
                 |max|3.00|70.00|3000.00|
 
                 After *Normalization*:
-                
+
                 || A | B | C |
                 |---|---|---|---|
                 |count|1000.00|1000.00|1000.00|
@@ -135,7 +135,7 @@ mermaid: false
 
             
 
-        ### Standardization vs Normalization
+        #### Standardization vs Normalization
         - In case of neural networks, Normalization is preffered because distribution is not assumed beforehand.
         - Standardization is preferred when data follows a *gaussian distribution*.
         - Standardization is preferred there are a lot of outliers in the data.
@@ -146,7 +146,7 @@ mermaid: false
         - Default value is 0.25.
 
 
-## Step 2: Choosing Suitable Model 
+### Step 2: Choosing Suitable Model 
 - In Scikit-Learn, ML Models are refered to as *Estimators*.
 - Choosing the model depends on the type of problem at hand.
 - Some models would yield better results than others for the same problem, so it's important to ensure the right model was chosen.
@@ -157,7 +157,7 @@ mermaid: false
     - If you have **structured** (tabulated) data, use ensemble methods.
     - If you have **unstructured** data, use deep learning or transfer learning methods.
 
-## Step 3: Fitting Model to Data & Making Predictions
+### Step 3: Fitting Model to Data & Making Predictions
 1. Fitting a model to data:
     - Models attempt to learn patterns in a dataset when the `fit()` method is called on a dataset.
 2. Making Predictions:</br>
@@ -179,9 +179,9 @@ There are 2 ways to make predictions:
         .predict(np.array(pandas_series).reshape(1, -1))
         ```
 
-## Step 4: Evaluating Models
+### Step 4: Evaluating Models
 
-### General Evaluation (`score` method):
+#### General Evaluation (`score` method):
 - Used on split dataset-couples to evaluate estimators.
 - Highest value is 1.0 & Lowest value is 0.0.
 - Default `score()` evaluation metric for Classification problems is **Mean Accuracy**.
@@ -190,7 +190,7 @@ There are 2 ways to make predictions:
 
 - (Check out Sklearn [Metrics & scoring documentation](https://scikit-learn.org/stable/modules/model_evaluation.html) for more info.)
 
-### Evaluating Classifiers (Classification Problems) 
+##### Evaluating Classifiers (Classification Problems) 
 1. Cross-validation Accuracy:
         ![Figure 3: 5-Fold Cross-validation](https://d2mk45aasx86xg.cloudfront.net/image5_11zon_af97fe4b03.webp)
     - Does k-fold splits.
@@ -223,7 +223,7 @@ There are 2 ways to make predictions:
         ```
 
 
-#### Classification Report
+##### Classification Report
 - Builds a text report showing the main classification metrics, such as:
     - Precision:
         - Accuracy of positive predictions.
@@ -271,7 +271,7 @@ There are 2 ways to make predictions:
         from sklearn.metrics import classification_report
         print (classification_report(y_test,y_preds))
         ```
-### Evaluating Regressors (Regression Problems)   
+#### Evaluating Regressors (Regression Problems)   
 1. R2 Score:
 
 2. Mean Absolute Error (MAE):
@@ -280,30 +280,30 @@ There are 2 ways to make predictions:
 
 
 
-## Step 5: Improving Model
+### Step 5: Improving Model
 - Tuning the estimator's hyperparameters to yield better results.
 - It's best practice to test different hyperparameters with a validation set or cross-validation.
 
-## Step 6: Saving & Reloading Trained Model
+### Step 6: Saving & Reloading Trained Model
 - Trained models can be exported and used again later.
 - Python's `pickle` module is used to export & load trained modules.
 - `pickle.dump()` method is used to export models.
 - `pickle.load()` method is used to load models.
 
-# Introducing [sklearn.pipeline.Pipeline](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html):
+## Introducing [sklearn.pipeline.Pipeline](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html):
 - Pipeline of transforms with a final *estimator*.
 - Sequentially applies a list of transforms and a final estimator.
 - The purpose of the pipeline is to assemble several steps that can be cross-validated together while setting different parameters.
 - Refer to documentation for more info.
 
-# Examples on the Scikit-Learn Workflow
-## Example 1: Predicting Heart Diseases - Classification Problem
+## Examples on the Scikit-Learn Workflow
+### Example 1: Predicting Heart Diseases - Classification Problem
 [ML - Example on Classification Problems](https://github.com/thrasher995/thrasher995.github.io/blob/main/_data/_notebooks/classification_example.ipynb)
 
 
-## Example 2: Predicting Median House Values in California Districts - Regression Problem
+### Example 2: Predicting Median House Values in California Districts - Regression Problem
 [ML - Example on Regression Problems](https://github.com/thrasher995/thrasher995.github.io/blob/main/_data/_notebooks/regression_example.ipynb)
 
 
-## Example 3: Using Scikit-Learn's `Pipeline()` Class:
+### Example 3: Using Scikit-Learn's `Pipeline()` Class:
 [ML - Example on Scikit-Learn's Pipeline() Class](https://github.com/thrasher995/thrasher995.github.io/blob/main/_data/_notebooks/pipelines.ipynb)
