@@ -34,8 +34,7 @@ mermaid: false
         **X:** has all of the *features* columns
         **Y:** has *target* column
     3. Filling (**Imputing**) or disregarding missing values:
-        1. Imputing with a [sklearn.impute.SimpleImputer()](https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html) object.
-            
+        1. Imputing with a [sklearn.impute.SimpleImputer()](https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html) object.   
         2. Dropping values using [pandas.DataFrame.dropna()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html) method.
             
     4. Converting non-numerical values into numerical values (**feature encoding**):
@@ -64,8 +63,9 @@ mermaid: false
                 scaler = StandardScaler()
                 scaled_df = scaler.fit_transform(original_df)
                 ```    
-            - Example on *Standardization*: </br>
-                **A,B,C** are the Features. </br>
+            - Example on *Standardization*:
+                **A,B,C** are the Features. 
+                
                 Before *Standardization*:
                 
                 || A | B | C |
@@ -104,8 +104,10 @@ mermaid: false
                 scaler = MinMaxScaler()
                 scaled_df = scaler.fit_transform(original_df)
                 ```
-            - Example on *Normalization*: </br>
-                **A,B,C** are the Features. </br>
+            - Example on *Normalization*: 
+            
+                **A,B,C** are the Features. 
+                
                 Before *Normalization*:
                 
                 || A | B | C |
@@ -160,7 +162,8 @@ mermaid: false
 ### Step 3: Fitting Model to Data & Making Predictions
 1. Fitting a model to data:
     - Models attempt to learn patterns in a dataset when the `fit()` method is called on a dataset.
-2. Making Predictions:</br>
+2. Making Predictions:
+
 There are 2 ways to make predictions:
     1. Using `predict()` method:
         - Main method used
