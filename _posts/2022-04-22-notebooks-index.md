@@ -19,5 +19,6 @@ mermaid: false
 2. [ML - Example on Classification Problems](https://github.com/thrasher995/thrasher995.github.io/blob/main/_data/_notebooks/classification_example.ipynb)
 3. [ML - Example on Classification Problems (with Calibration)](https://github.com/thrasher995/thrasher995.github.io/blob/main/_data/_notebooks/classification_withCalibration_example.ipynb)
 4. [ML - Example on Regression Problems](https://github.com/thrasher995/thrasher995.github.io/blob/main/_data/_notebooks/regression_example.ipynb)
+5. [ML - Example on Scikit-Learn's Pipeline() Class](https://github.com/thrasher995/thrasher995.github.io/blob/main/_data/_notebooks/pipelines.ipynb)
 
 
