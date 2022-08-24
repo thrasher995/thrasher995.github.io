@@ -64,7 +64,7 @@ mermaid: false
                 scaled_df = scaler.fit_transform(original_df)
                 ```    
             - Example on *Standardization*:
-            
+
                 **A,B,C** are the Features. 
                 
                 Before *Standardization*:
@@ -138,7 +138,7 @@ mermaid: false
 
             
 
-        #### Standardization vs Normalization
+#### Standardization vs Normalization
         - In case of neural networks, Normalization is preffered because distribution is not assumed beforehand.
         - Standardization is preferred when data follows a *gaussian distribution*.
         - Standardization is preferred there are a lot of outliers in the data.
