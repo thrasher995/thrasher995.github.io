@@ -2,8 +2,8 @@
 layout: post
 title: Introduction to Scikit Learn
 subtitle: More on ML Framework
-categories: ML Python Scikit-learn
-tags: [machine learning, scikit-learn, python]
+categories: ML Python Scikit-learn Pipelines
+tags: [machine learning, scikit-learn, python, pipelines]
 mermaid: false
 ---
 
