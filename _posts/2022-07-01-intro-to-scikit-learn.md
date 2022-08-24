@@ -64,6 +64,7 @@ mermaid: false
                 scaled_df = scaler.fit_transform(original_df)
                 ```    
             - Example on *Standardization*:
+            
                 **A,B,C** are the Features. 
                 
                 Before *Standardization*:
