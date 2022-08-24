@@ -80,6 +80,7 @@ mermaid: false
                 |max|3.00|70.00|3000.00|
 
                 After *Standardization*:
+                
                 || A | B | C |
                 |---|---|---|---|
                 |count|1000.00|1000.00|1000.00|
@@ -119,6 +120,7 @@ mermaid: false
                 |max|3.00|70.00|3000.00|
 
                 After *Normalization*:
+                
                 || A | B | C |
                 |---|---|---|---|
                 |count|1000.00|1000.00|1000.00|
