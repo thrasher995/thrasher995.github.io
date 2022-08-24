@@ -184,7 +184,6 @@ There are 2 ways to make predictions:
         ```
 
 ### Step 4: Evaluating Models
-
 #### General Evaluation (`score` method):
 - Used on split dataset-couples to evaluate estimators.
 - Highest value is 1.0 & Lowest value is 0.0.
