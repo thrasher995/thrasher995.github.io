@@ -34,18 +34,18 @@ mermaid: false
         **X:** has all of the *features* columns
         **Y:** has *target* column
     3. Filling (**Imputing**) or disregarding missing values:
-        1. Imputing with a `SimpleImputer()` object:
+        1. Imputing with a `SimpleImputer()` object: </br>
             [sklearn.impute.SimpleImputer()](https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html)
-        2. Dropping values using `dropna()` method:
+        2. Dropping values using `dropna()` method: </br>
             [pandas.DataFrame.dropna()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html)
-    4. Converting non-numerical values into numerical values (**feature encoding**).
+    4. Converting non-numerical values into numerical values (**feature encoding**): </br>
         1. [sklearn.preprocessing.OneHotEncoder()](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
         2. [pandas.get_dummies()](https://pandas.pydata.org/docs/reference/api/pandas.get_dummies.html)
     
-    5. **Features Scaling**: </br>
-        Ensuring that all numerical data (across all features) is on the same scale.</br>
-        When features are on different scales, one feature would dominate over the other.</br>
-        Needed when using ML Algorithms that require **gradient calculation**, such as: *linear/logistic regression*, *artificial neural networks*, and *deep neural networks*.</br>
+    5. **Features Scaling**: 
+        </br> Ensuring that all numerical data (across all features) is on the same scale. </br>
+        When features are on different scales, one feature would dominate over the other. </br>
+        Needed when using ML Algorithms that require **gradient calculation**, such as: *linear/logistic regression*, *artificial neural networks*, and *deep neural networks*. </br>
         Not required when using *distance-based* or *tree-based* algorithms, such as: *K-Means Clustering*, *K Nearest Neighbors*, *Decision Trees*, *Random Forest*, and *XG-Boost*.
 
         1. **Standardization:**
