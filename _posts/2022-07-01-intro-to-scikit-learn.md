@@ -18,7 +18,7 @@ mermaid: false
 - Implements methods to evaluate ML models
 - Very well-design API
 
-# Scikit-learn Workflow:
+# Scikit-learn Workflow
 1. Getting the data ready
 2. Choosing a suitable model 
 3. Fitting model to data & make predictions
@@ -42,7 +42,7 @@ mermaid: false
         1. [sklearn.preprocessing.OneHotEncoder()](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
         2. [pandas.get_dummies()](https://pandas.pydata.org/docs/reference/api/pandas.get_dummies.html)
     
-    5. **Feature Scaling**: </br>
+    5. **Features Scaling**: </br>
         Ensuring that all numerical data (across all features) is on the same scale.</br>
         When features are on different scales, one feature would dominate over the other.</br>
         Needed when using ML Algorithms that require **gradient calculation**, such as: *linear/logistic regression*, *artificial neural networks*, and *deep neural networks*.</br>
@@ -133,7 +133,7 @@ mermaid: false
 
             
 
-        ### Standardization vs Normalization:
+        ### Standardization vs Normalization
         - In case of neural networks, Normalization is preffered because distribution is not assumed beforehand.
         - Standardization is preferred when data follows a *gaussian distribution*.
         - Standardization is preferred there are a lot of outliers in the data.
@@ -188,7 +188,7 @@ There are 2 ways to make predictions:
 
 - (Check out Sklearn [Metrics & scoring documentation](https://scikit-learn.org/stable/modules/model_evaluation.html) for more info.)
 
-### Evaluating Classifiers (Classification Problems): 
+### Evaluating Classifiers (Classification Problems) 
 1. Cross-validation Accuracy:
         ![Figure 3: 5-Fold Cross-validation](https://d2mk45aasx86xg.cloudfront.net/image5_11zon_af97fe4b03.webp)
     - Does k-fold splits.
@@ -221,7 +221,7 @@ There are 2 ways to make predictions:
         ```
 
 
-#### Classification Report:
+#### Classification Report
 - Builds a text report showing the main classification metrics, such as:
     - Precision:
         - Accuracy of positive predictions.
@@ -269,7 +269,7 @@ There are 2 ways to make predictions:
         from sklearn.metrics import classification_report
         print (classification_report(y_test,y_preds))
         ```
-### Evaluating Regressors (Regression Problems):    
+### Evaluating Regressors (Regression Problems)   
 1. R2 Score:
 
 2. Mean Absolute Error (MAE):
@@ -294,7 +294,7 @@ There are 2 ways to make predictions:
 - The purpose of the pipeline is to assemble several steps that can be cross-validated together while setting different parameters.
 - Refer to documentation for more info.
 
-# Examples on the Scikit-Learn Workflow:
+# Examples on the Scikit-Learn Workflow
 ## Example 1: Predicting Heart Diseases - Classification Problem
 [ML - Example on Classification Problems](https://github.com/thrasher995/thrasher995.github.io/blob/main/_data/_notebooks/classification_example.ipynb)
 
@@ -304,3 +304,4 @@ There are 2 ways to make predictions:
 
 
 ## Example 3: Using Scikit-Learn's `Pipeline()` Class:
+[ML - Example on Scikit-Learn's Pipeline() Class](https://github.com/thrasher995/thrasher995.github.io/blob/main/_data/_notebooks/pipelines.ipynb)
